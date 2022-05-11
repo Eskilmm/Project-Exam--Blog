@@ -96,6 +96,6 @@
 header{
     min-height: 100vh;
     padding-top: 5rem;
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/media/fans.jpeg) center/cover no-repeat;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/media/fans.jpeg) center/cover no-repeat;
 
 }

@@ -31,11 +31,58 @@ button, input[type= "submit"] {
     justify-content: space-between;
 }
 
-
-
 .text{
     font-weight: 400;
     opacity: 0.9;
     line-height: 1.6;
     letter-spacing: 1px;
+}
+
+.form-control{
+    width: 100%;
+    margin: 0.6rem 0;
+    max-width: 500px;
+    border: 1px solid white;
+    border-radius: 0.2rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+}
+
+.btn{
+    padding: 0.7rem 2.4rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    background-color: gold;
+    color:black;
+    border: 1px solid gold;
+}
+.btn:hover{
+    opacity: 0.9;
+    transition: var(--trans);
+}
+::-webkit-calendar-picker-indicator{
+    filter:invert(1);
+}
+.header-form .btn{
+    margin-top: 0.8rem;
+}
+/* endre bakgrunn på scroll m js */
+.navbar-cng{
+background-color: red;
+box-shadow: 0px 4px 5px 0px rgba(49,49, 49, 0.2);
+transition: var(--trans);
+}
+
+.navbar-cng .site-brand{
+    color: var(--dark);
+}
+
+.navbar-cng .site-brand span{
+    color: gold;
+}
+
+.navbar-cng #navbar-show-btn{
+    color: gold;
 }

@@ -40,3 +40,62 @@
 #navbar-show-btn:hover{
     opacity: 1;
 }
+
+#navbar-collapse{
+    background-color: red;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100px;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: var(--trans);
+}
+
+.navbar-collapse-rmw{
+    transform: translateX(0)!important;
+
+}
+#navbar-close-btn{
+    background: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 0.2rem;
+    font-size: 2rem;
+    transition: var(--trans);
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    border: none;
+}
+#navbar-close-btn:hover{
+    background-color: white;
+    color: red;
+}
+
+.navbar-nav{
+    margin-top: 5rem;
+}
+
+.nav-item{
+    margin: 1.6rem 0;
+}
+
+.nav-link{
+    color: white;
+    font-size: 1.2rem;
+    transition: var(--trans);
+}
+
+.nav-link:hover{
+    opacity: 0.8;
+}
+
+header{
+    min-height: 100vh;
+    padding-top: 5rem;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/media/Liverpool\ fans.jpeg);
+
+}

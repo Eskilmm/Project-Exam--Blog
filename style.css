@@ -3,13 +3,10 @@
     top: 0;
     width: 100%;
     background-color: transparent;
-    padding: 1rem;
+    padding: 1rem 0;
     z-index: 999;
-    display: flex;
 }
 .navbar .container{
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 

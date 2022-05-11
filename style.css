@@ -1,3 +1,9 @@
+:root{
+    --trans: all 0.3s ease-in-out;
+}
+
+
+
 .navbar{
     position: fixed;
     top: 0;
@@ -20,4 +26,17 @@
 
 .site-brand span{
     font-weight: 300;
+}
+
+#navbar-show-btn{
+    background:transparent;
+    color: white;
+    font-size: 2rem;
+    opacity: 0.9;
+    transition: var(--trans) ;
+    border: none;
+}
+
+#navbar-show-btn:hover{
+    opacity: 1;
 }

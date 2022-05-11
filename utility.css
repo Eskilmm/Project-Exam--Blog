@@ -35,3 +35,10 @@ button, input[type= "submit"] {
         -ms-flex-pack: center;
             justify-content: center;
 }
+
+.text{
+    font-weight: 400;
+    opacity: 0.9;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}

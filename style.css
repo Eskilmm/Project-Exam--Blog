@@ -5,6 +5,7 @@
     background-color: transparent;
     padding: 1rem;
     z-index: 999;
+    display: flex;
 }
 .navbar .container{
     -webkit-box-pack: justify;

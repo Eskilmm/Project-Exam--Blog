@@ -86,3 +86,25 @@ transition: var(--trans);
 .navbar-cng #navbar-show-btn{
     color: gold;
 }
+.title-wrap{
+    text-align: center;
+    padding: 1.4rem 0;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.lg-title{
+    font-size: 1.8rem;
+}
+.sm-title{
+    display: block;
+    color: black;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+}

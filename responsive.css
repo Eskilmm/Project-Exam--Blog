@@ -1,0 +1,99 @@
+@media screen and (min-width: 768px){
+    .header-title p{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 992px){
+    .header-title h1{
+        font-size: 4rem;
+    }
+}
+.header-form form{
+    flex-direction: row;
+    align-items: stretch;
+}
+
+/*navbar*/
+
+#navbar-show-btn{
+    display: none;
+}
+
+#navbar-collapse{
+    display: block!important;
+    background-color: transparent;
+    transform: translateX(0);
+    height: auto;
+    padding: 0;
+    position: static;
+    width: 100%;
+}
+
+#navbar-close-btn{
+    display:none;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.nav-item{
+    margin: 0;
+    margin-left: 2rem;
+}
+.navbar-cng .navbar-nav .nav-link{
+    color: gold;
+}
+.about-row, .contact-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+
+
+.about-row{
+    align-items: center;
+}
+
+.about-left{
+    margin: 0;
+}
+
+.contact-row{
+    row-gap: 0;
+}
+.contact-form .form-control{
+    margin-left: 0;
+}
+
+.contact-form .form-control:nth-child(1){
+    margin-top: 0;
+}
+
+.contact-right{
+    margin: 0;
+}
+
+.contact-form .btn{
+    margin-left: 0;
+}
+
+.contact-icon{
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+    margin:0 1rem;
+}
+
+.contact-item{
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contact-item:nth-child(1){
+    margin-top: 0;
+}

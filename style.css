@@ -139,3 +139,162 @@ header{
 .header-form input:not([type = submit])::placeholder{
     color: white;
 }
+
+
+
+
+
+/* footer */
+
+footer{
+    background-color: white;
+    color:black;
+    text-align: center;
+    position: relative;
+}
+
+footer::before{
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 4px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+footer.site-brand{
+    margin-bottom: 1.5rem;
+    display: block;
+    font-size: 2rem!important;
+}
+
+.footer-item{
+    margin: 3rem;
+}
+
+.footer-item a{
+    font-size: 1.3rem;
+    color: black;
+    transition: var(--trans);
+}
+
+.footer-item a:hover{
+    color: gold;
+}
+.footer-item ul{
+    padding: 0;
+}
+
+.footer-item h2{
+    margin-bottom: 1.4rem;
+
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li{
+    margin: 0.7rem;
+}
+
+.contact-form{
+    flex-direction: column;
+}
+
+.contact-form form input{
+    width: 100%;
+    max-width: 300px;
+}
+.contact-form .form-control{
+    border-color: gold;
+    transition: var(--trans);
+}
+.contact-form .form-control:focus{
+    border-color: gold;
+}
+.contact-form form input[type = "email"]::placeholder{
+    color: black;
+    opacity: 0.3;
+}
+
+
+/* ABOUT PAGE */
+
+.about-right .text{
+    margin-bottom: 1rem;
+}
+.about-right h2{
+    margin-bottom: 2.5rem;
+}
+
+/* Stats */
+
+#stats{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/fans.jpeg)center/cover no-repeat;
+    min-height: 80vh;
+}
+
+#stats .title-wrap{
+    color: white;
+}
+#stats .sm-title{
+    color: black;
+}
+.stats-item{
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+.stats-icon{
+    font-size: 3.2rem;
+}
+
+.stats-info strong{
+    font-size: 2rem;
+    display: block;
+    margin: 1rem 0;
+}
+
+.stats-info .text{
+    text-transform: uppercase;
+}
+
+
+/*Contact */
+
+.contact-form .form-control{
+    border: 1px solid gold;
+    color: gold;
+    display: block;
+    margin: 1.6rem auto;
+}
+
+.contact-form .btn{
+    display: block;
+    margin: auto;
+}
+
+.contact-icon{
+    background-color: gold;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 1rem auto;
+    font-size: 2rem;
+}
+
+.contact-item{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.contact-item div span{
+    font-weight: 600;
+    font-family: "";
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 1rem;
+}

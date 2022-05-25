@@ -96,7 +96,7 @@
 
 header{
     min-height: 100vh;
-    padding-top: 5rem;
+    padding-top: 7rem;
     background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0,0,0,0.4)), url(./media/fans3.jpeg) center/cover
     no-repeat;
     flex-direction: column;
@@ -139,9 +139,79 @@ header{
 .header-form input:not([type = submit])::placeholder{
     color: white;
 }
+::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+
+.header-form .btn{
+    margin-top: 0.8rem;
+}
+
+/* endre bakgrunn på scroll m js */
+.navbar-cng{
+    background-color:white;
+    box-shadow: 0px 4px 5px 0px rgba(49,49, 49, 0.2);
+    transition: var(--trans);
+    }
+    
+    .navbar-cng .site-brand{
+        color: var(--dark);
+    }
+    
+    .navbar-cng .site-brand span{
+        color: gold;
+    }
+    
+    .navbar-cng #navbar-show-btn{
+        color: gold;
+    }
+
+    .latest-item{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        transition: var(--trans);
+    }
+
+    .latest-item::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: linear-gradient(to bottom, transparent 0%
+        transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0,0,0,0.8) 100%);
+    }
+
+    .latest-item-content{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        color:white;
+        width: 100%;
+        padding:1rem;
+        transform: translateY(62%);
+        transition: var(--trans);
+    }
 
 
+    .latest-item-content span{
+        font-size: 1.2rem;
+        display: block;
+        margin-bottom: 1.2rem;
+        text-transform: capitalize;
+    }
 
+    .latest-item-content .text{
+        color: white;
+    }
+
+    .latest-item:hover .featured-item-content{
+        transform: translateY(0);
+    }
 
 
 /* footer */

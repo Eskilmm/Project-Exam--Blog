@@ -62,35 +62,23 @@ button, input[type= "submit"] {
     opacity: 0.9;
     transition: var(--trans);
 }
+/*css stop anima*/
 
 .resize-animation-stopper *{
     animation: none!important;
     transition: none!important;
 }
-::-webkit-calendar-picker-indicator{
-    filter:invert(1);
+
+
+
+.py-4{
+    padding: 4rem 0;
 }
-.header-form .btn{
-    margin-top: 0.8rem;
-}
-/* endre bakgrunn på scroll m js */
-.navbar-cng{
-background-color:white;
-box-shadow: 0px 4px 5px 0px rgba(49,49, 49, 0.2);
-transition: var(--trans);
+img{
+    width: 100%;
+    display: block;
 }
 
-.navbar-cng .site-brand{
-    color: var(--dark);
-}
-
-.navbar-cng .site-brand span{
-    color: gold;
-}
-
-.navbar-cng #navbar-show-btn{
-    color: gold;
-}
 .title-wrap{
     text-align: center;
     padding: 1.4rem 0;
@@ -114,3 +102,9 @@ transition: var(--trans);
     line-height: 1.7;
 }
 
+.my-2{
+    margin: 2rem 0;
+}
+.shadow:hover{
+    box-shadow: 0px 0px 18px -4px rgba(109, 109, 109, 0.64);
+}

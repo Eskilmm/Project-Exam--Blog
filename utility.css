@@ -76,7 +76,7 @@ button, input[type= "submit"] {
 }
 img{
     width: 100%;
-    display: block;
+    display: flex;
 }
 
 .title-wrap{

@@ -2,10 +2,6 @@
     --trans: all 0.3s ease-in-out;
     --dark: #0e1010;
 }
-*{
-    box-sizing: border-box;
-}
-
 
 .navbar{
     position: fixed;
@@ -97,7 +93,7 @@
 }
 
 header{
-    min-height: 100vh;
+    min-height: 78vh;
     padding-top: 7rem;
     background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0,0,0,0.4)), url(./media/fans3.jpeg) center/cover
     no-repeat;
@@ -175,31 +171,6 @@ header{
         overflow: hidden;
         transition: var(--trans);
     }
-
-    .pre-btn,
-.nxt-btn {
-  border: none;
-  width: 10vw;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  cursor: pointer;
-  z-index: 8;
-}
-
-.pre-btn {
-    left: 0;
-    transform: rotate(180deg);
-  }
-  
-  .nxt-btn {
-    right: 0;
-  }
-    
     
 
 
@@ -211,8 +182,7 @@ header{
         width: 100%;
         height: 100%;
         z-index: 1;
-        background: linear-gradient(to bottom, transparent 0%
-        transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0,0,0,0.8) 100%);
+        background: rgb(0, 0, 0, 0.4)
     }
 
     .latest-item-content{
@@ -243,189 +213,6 @@ header{
     .latest-item:hover .latest-item-content{
         transform: translateY(0);
     }
-
-    
-  /* TEST */
-
-  .product {
-    position: relative;
-    overflow: hidden;
-    padding: 20px;
-  }
-  
-  .product-category {
-    padding: 0 10vw;
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 40px;
-    text-transform: capitalize;
-  }
-  
-  .product-container {
-    padding: 0 10vw;
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-  }
-  
-  .product-container::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .product-card {
-    flex: 0 0 auto;
-    width: 250px;
-    height: 450px;
-    margin-right: 40px;
-  }
-  
-  .product-image {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-  }
-  
-  .product-thumb {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .discount-tag {
-    position: absolute;
-    background: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    color: #ff7d7d;
-    right: 10px;
-    top: 10px;
-    text-transform: capitalize;
-  }
-  
-  .card-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    width: 90%;
-    text-transform: capitalize;
-    border: none;
-    outline: none;
-    background: #fff;
-    border-radius: 5px;
-    transition: 0.5s;
-    cursor: pointer;
-    opacity: 0;
-  }
-  
-  .product-card:hover .card-btn {
-    opacity: 1;
-  }
-  
-  .card-btn:hover {
-    background: #ff7d7d;
-    color: #fff;
-  }
-  
-  .product-info {
-    width: 100%;
-    height: 100px;
-    padding-top: 10px;
-  }
-  
-  .product-brand {
-    text-transform: uppercase;
-  }
-  
-  .product-short-description {
-    width: 100%;
-    height: 20px;
-    line-height: 20px;
-    overflow: hidden;
-    opacity: 0.5;
-    text-transform: capitalize;
-    margin: 5px 0;
-  }
-  
-  .price {
-    font-weight: 900;
-    font-size: 20px;
-  }
-  
-  .actual-price {
-    margin-left: 20px;
-    opacity: 0.5;
-    text-decoration: line-through;
-  }
-  
-  .pre-btn,
-  .nxt-btn {
-    border: none;
-    width: 10vw;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-    cursor: pointer;
-    z-index: 8;
-  }
-  
-  .pre-btn {
-    left: 0;
-    transform: rotate(180deg);
-  }
-  
-  .nxt-btn {
-    right: 0;
-  }
-  
-  .pre-btn img,
-  .nxt-btn img {
-    opacity: 0.2;
-  }
-  
-  .pre-btn:hover img,
-  .nxt-btn:hover img {
-    opacity: 1;
-  }
-  
-  .collection-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-  }
-  
-  .collection {
-    position: relative;
-  }
-  
-  .collection img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .collection p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-    text-transform: capitalize;
-  }
-  
-  .collection:nth-child(3) {
-    grid-column: span 2;
-    margin-bottom: 10px;
-  }
   
 
 
@@ -458,7 +245,7 @@ footer.site-brand{
 }
 
 .footer-item a{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: black;
     transition: var(--trans);
 }
@@ -481,25 +268,35 @@ footer.site-brand{
 }
 
 .social-links li{
-    margin: 0.7rem;
+    margin: 0.5rem;
 }
 
-.contact-form{
+.footer-item:nth-child(3) li{
+    margin: 0.5rem 0;
+}
+
+.footer-item:nth-child(3) a{
+    display: inline-block;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.subscribe-form{
     flex-direction: column;
 }
 
-.contact-form form input{
+.subscribe-form form input{
     width: 100%;
     max-width: 300px;
 }
-.contact-form .form-control{
+.subscribe-form .form-control{
     border-color: gold;
     transition: var(--trans);
 }
-.contact-form .form-control:focus{
+.subscribe-form .form-control:focus{
     border-color: gold;
 }
-.contact-form form input[type = "email"]::placeholder{
+.subscribe-form form input[type = "email"]::placeholder{
     color: black;
     opacity: 0.3;
 }
@@ -517,7 +314,7 @@ footer.site-brand{
 /* Stats */
 
 #stats{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/fans.jpeg)center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./media/fans.jpeg)center/cover no-repeat;
     min-height: 80vh;
 }
 
@@ -583,3 +380,56 @@ footer.site-brand{
     display: block;
     margin-bottom: 1rem;
 }
+
+/* blog */
+
+#blog{
+    background-color:rgba(141, 73, 73, 0.3);
+}
+.blog-item{
+    background-color: white;
+    transition: var(--trans);
+}
+
+.blog-item-top{
+    position: relative;
+}
+.blog-date{
+    position:absolute;
+    background-color: gold;
+    color: white;
+    padding: 0.5rem;
+    height: 38px;
+    min-width: 160px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    bottom: -19px;
+    left: 5%;
+}
+.blog-item-bottom{
+    padding:2rem 1rem;
+}
+
+.blog-item-bottom span{
+    text-transform: uppercase;
+    color: darkgray;
+    opacity: 0.7;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 1rem;
+}
+.blog-item-bottom a{
+    margin:1rem 0;
+    font-size: 1.4rem;
+    display: block;
+    font-family: "";
+    font-weight: 600;
+    line-height: 1.6;
+    transition: var(--trans);
+}
+
+.blog-item-bottom a:hover{
+    opacity: 0.8;
+}
+
+

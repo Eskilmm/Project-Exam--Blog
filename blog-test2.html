@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiverBlog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+<body>
+    
+
+
+
+<!--NAV BAR-->
+
+<nav class="navbar">
+
+    <div class="container flex">
+        <a href="index.html" class="site-brand">
+            Liver<span>Blog</span>
+        </a>
+
+        <button type="button" id="navbar-show-btn" class="flex">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div id="navbar-collapse">
+            <button type="button" id="navbar-close-btn" class = "flex">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+
+            </ul>    
+        </div>
+    </div>
+</nav>
+
+<!--Header-->
+
+<header class="flex">
+<div class="container">
+
+    <div class="header-title">
+        <h1>Our blogs</h1>
+        <p> Lorem ipsum pladenejknfrnfjnrof frnfojnor ifnrjoro</p>
+    </div>
+
+    </div>
+</header>
+
+
+<div id="post">Loading...</div>   
+  <p>&lt; <a href="posts.html">Back to posts</a></p>
+
+<script>
+const queryString = window.location.search;
+const id = new URLSearchParams(queryString).get('id');
+if (!id) { window.location = "posts.html"; }
+
+const url = `http://localhost:8888/wp-json/wp/v2/posts${id}`;
+//const url = `https://www.geek.no/wp-json/wp/v2/pages/${id}`;
+fetch(url)
+.then(response => response.json())
+.then(data => {
+  //console.log('Success:', data);
+  displayPost(data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+
+const output = document.querySelector("#post");
+function displayPost (data) {
+  console.log(data); 
+  const title = data.title.rendered;
+  //const excerpt = data.excerpt.rendered;
+  const excerpt = data.content.rendered;
+  const link = data.link;
+  getImageURL(data.featured_media);  
+
+  let content = `
+  <h1>${title}</h1>
+  ${excerpt}
+  <p>&gt; <a href="${link}" target="_blank">Read more @ geek.no</a></p>
+  `;
+
+  output.innerHTML = content;
+  document.title = title;
+}
+
+function getImageURL(id) {
+  fetch(`http://localhost:8888/wp-json/wp/v2/posts/media/${id}`)
+  .then(response => response.json())
+  .then(data => {
+    //console.log('Success (getImageURL):', data);
+    addImage (data.source_url);
+  })
+  .catch((error) => {
+    console.error('Error (getImageURL):', error);
+  });
+}
+
+function addImage(src) {
+  console.log ("IMG: " + src);
+  if (src) {
+    let img = document.createElement("img");
+    img.src = src;
+    img.alt = "";
+    img.width = 640;
+    output.prepend(img);
+  }
+}
+
+</script>
+</body>
+</html>

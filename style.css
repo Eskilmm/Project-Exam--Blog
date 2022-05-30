@@ -282,11 +282,11 @@ footer.site-brand{
 }
 
 .subscribe-form{
-    flex-direction: column;
+    flex-direction:r
 }
 
 .subscribe-form form input{
-    width: 100%;
+    width: 75%;
     max-width: 300px;
 }
 .subscribe-form .form-control{
@@ -348,7 +348,7 @@ footer.site-brand{
 
 .contact-form .form-control{
     border: 1px solid gold;
-    color: gold;
+    color: black;
     display: block;
     margin: 1.6rem auto;
 }

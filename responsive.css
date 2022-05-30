@@ -12,7 +12,7 @@
     }
     .latest-row, .footer-row{
         display: grid;
-        grid-template-columns: repeat(2 , 2fr);
+        grid-template-columns: repeat(2 , 1fr);
         gap: 2rem;
 }
 
@@ -22,16 +22,20 @@
 .footer-row{
     text-align: left;
 }
+
+.footer-item, .social-links{
+    justify-content: flex-start;
+}
 .social-links{
     justify-content: start;
 }
 
-.subscribe-form form{
-    align-items: flex-start;
-}
-
 .social-links li:nth-child(1){
     margin-left: 0;
+}
+
+.subscribe-form form{
+    align-items: flex-start;
 }
 
 .blog-row, .stats-row{
@@ -153,7 +157,7 @@
 
 @media screen and (min-width: 1200px){
     .footer-row{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

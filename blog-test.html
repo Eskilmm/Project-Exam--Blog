@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
     <link rel="stylesheet" href="responsive.css">
-
+    
 </head>
 <body>
     
@@ -64,37 +64,146 @@
     </div>
 </header>
 
-<h1>Blogs</h1>
-<ul id="posts">Loading...</ul>
 
-<script>
-    const url = "http://localhost:8888/wp-json/wp/v2/posts";
-    //const url = "https://www.geek.no/wp-json/wp/v2/pages";
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      //console.log('Success:', data);
-      listPosts(data);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+<section class="product-> blog"> 
+    <h2 class="product-category -> blog-title">best selling</h2>
+    <button class="pre-btn"><img src="media/arrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="media/arrow.png" alt=""></button>
+    <div class="product-container -> blog-container">
+        <div class="product-card -> blog-card"></div>>
+            <div class="product-image -> blog image">
+                <span class="discount-tag -> read-time">50% off</span>
+                <img src="images/card1.jpg" class="product-thumb" alt="">
+                <button class="card-btn -> read-btn">Read here</button>
+            </div>
+            <div class="product-info -> info-blog">
+                <h2 class="product-brand -> blog-about">Champions league</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+            </div>
+        </div>
+
+        <div class="product-card -> blog-card"></div>>
+            <div class="product-image -> blog image">
+                <span class="discount-tag -> read-time">50% off</span>
+                <img src="images/card1.jpg" class="product-thumb" alt="">
+                <button class="card-btn -> read-btn">Read here</button>
+            </div>
+            <div class="product-info -> info-blog">
+                <h2 class="product-brand -> blog-about">Champions league</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+            </div>
+        </div>
+        <div class="product-card -> blog-card"></div>>
+            <div class="product-image -> blog image">
+                <span class="discount-tag -> read-time">50% off</span>
+                <img src="images/card1.jpg" class="product-thumb" alt="">
+                <button class="card-btn -> read-btn">Read here</button>
+            </div>
+            <div class="product-info -> info-blog">
+                <h2 class="product-brand -> blog-about">Champions league</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+            </div>
+        </div>
+        <div class="product-card -> blog-card"></div>>
+            <div class="product-image -> blog image">
+                <span class="discount-tag -> read-time">50% off</span>
+                <img src="images/card1.jpg" class="product-thumb" alt="">
+                <button class="card-btn -> read-btn">Read here</button>
+            </div>
+            <div class="product-info -> info-blog">
+                <h2 class="product-brand -> blog-about">Champions league</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+            </div>
+        </div>
+        <div class="product-card -> blog-card"></div>>
+            <div class="product-image -> blog image">
+                <span class="discount-tag -> read-time">50% off</span>
+                <img src="images/card1.jpg" class="product-thumb" alt="">
+                <button class="card-btn -> read-btn">Read here</button>
+            </div>
+            <div class="product-info -> info-blog">
+                <h2 class="product-brand -> blog-about">Champions league</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+            </div>
+        </div>
+        <div class="product-card -> blog-card"></div>>
+            <div class="product-image -> blog image">
+                <span class="discount-tag -> read-time">50% off</span>
+                <img src="images/card1.jpg" class="product-thumb" alt="">
+                <button class="card-btn -> read-btn">Read here</button>
+            </div>
+            <div class="product-info -> info-blog">
+                <h2 class="product-brand -> blog-about">Champions league</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+      
+          
     
-    const output = document.querySelector("#posts");
-    function listPosts (posts) {
-        let myList = "";
-        for (let post of posts) {
-            console.log(post);
-            myList += `
-            <li>
-                <a href="blog-test.html?id=${post.id}">
-                    ${post.title.rendered}
-                </a>
-            </li>`;
-        }
-        output.innerHTML = myList;
-    }
 
-</script> 
+          
+
+
+    <footer class="py-4">
+    <div class="container footer-row">
+        <div class="footer-item">
+            <a href="index.html" class="site-brand">
+                Liver<span>Blog</span>
+            </a>
+            <p class="text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  It has survived not only five centuries, but also the leap 
+                 into electronic typesetting, remaining essentially unchanged. 
+            </p>
+        </div>
+        <div class="footer-item">
+            <h2>Follow us on:</h2>
+            <ul class="social-links">
+                <li>
+                    <a href = "#">
+                        <i class="fab fa-facebook-f"> </i>
+                    </a>
+                </li>
+                <li>
+                    <a href = "#">
+                        <i class="fab fa-instagram"> </i>
+                    </a>
+                </li>
+                <li>
+                    <a href = "#">
+                        <i class="fab fa-twitter"> </i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class = "footer-item">
+            <h2>People to contact</h2>
+            <ul>
+                <li><a href = "#">Eksjdks@gmail.com</a></li>
+                <li><a href = "#">Austam@gmail.com</a></li>
+                <li><a href = "#">Maldmnke@gmail</a></li>
+                <li><a href = "#">Switz@gmail.com</a></li>
+                <li><a href = "#">Gallo@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <div class="subscribe-form footer-item">
+            <h2>Subscribe to us here</h2>
+            <form class="flex">
+                <input type="email" placeholder="Enter Email" class="form-control">
+                <input type="submit" class="btn" value="Subscribe">
+            </form>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>

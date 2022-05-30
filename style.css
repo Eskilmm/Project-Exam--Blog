@@ -141,6 +141,7 @@ header{
 }
 .header-form input[type = "date"]{
     text-transform: uppercase;
+    color: white;
 }
 .header-form input:not([type = submit])::placeholder{
     color: white;
@@ -467,7 +468,7 @@ footer.site-brand{
     border-color: rgb(204, 157, 0);
 }
 .subscribe-form form input[type = "email"]::placeholder{
-    color: black;
+    color:black;
     opacity: 0.3;
 }
 
@@ -519,7 +520,7 @@ footer.site-brand{
 
 .contact-form .form-control{
     border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #000;
+    color:black;
     display: block;
     margin: 2rem auto;
 }
@@ -643,6 +644,7 @@ footer.site-brand{
     border-radius: 100%;
     margin: 1rem;
 }
+
 
 /* main people// */
 

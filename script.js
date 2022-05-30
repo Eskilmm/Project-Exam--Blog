@@ -41,11 +41,12 @@ window.addEventListener('resize', () => {
     }, 400);
 });
 
+// Slider //
 
-const productContainers = [...document.querySelectorAll('product-container')];
+const productContainers = document.querySelectorAll('product-container');
 
-const nxtBtn = [...document.querySelectorAll('nxt-btn')];
-const preBtn = [...document.querySelectorAll('pre-btn')];
+const nxtBtn = document.querySelectorAll('nxt-btn');
+const preBtn = document.querySelectorAll('pre-btn');
 
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
@@ -59,3 +60,51 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+// load more test //
+const viewMoreBtn = document.querySelector('.view-more-btn');
+const item = document.querySelector('.latest-item');
+
+viewMoreBtn.addEventListener('click', (e) =>{
+    item.classList.toggle('show-more');
+})
+ 
+
+
+let loadMoreBtn =document.querySelectorAll('#load-more');
+let currentItem= 3
+
+loadMoreBtn.onclick = () =>{
+    let boxes= [...document.querySelectorAll('.latest .latest-row .latest-item')];
+    for (var i = currentItem; i< currentItem + 3; i++){
+        boxes[i].style.display = 'inline-block';
+    }
+    currentItem += 3
+}
+
+
+
+//const url = "http://localhost:8888/wp-json/wp/v2/posts";
+fetch(url)
+.then(response => response.json())
+.then(data => {
+  //console.log('Success:', data);
+  listPosts(data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+
+//const output = document.querySelector("#posts");
+//function listPosts (posts) {
+    let myList = "";
+    for (let post of posts) {
+        console.log(post);
+        myList += `
+        <li>
+            <a href="post.html?id=${post.id}">
+                ${post.title.rendered}
+            </a>
+        </li>`;
+    }
+   // output.innerHTML = myList;

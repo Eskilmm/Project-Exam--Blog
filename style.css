@@ -7,11 +7,13 @@
     --dark: #0e1010;
 }
 
+/*Navbar*/
+
 .navbar{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color:red;
+    background-color:rgb(255, 0, 0);
     padding: 1rem 0;
     z-index: 999;
 }
@@ -20,7 +22,7 @@
 }
 
 .site-brand{
-    color:gold;
+    color:rgb(204, 157, 0);
     font-size: 2.4rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -45,7 +47,7 @@
 }
 
 #navbar-collapse{
-    background-color: red;
+    background-color:rgb(255, 0, 0);
     position: fixed;
     top: 0;
     right: 0;
@@ -75,7 +77,7 @@
 }
 #navbar-close-btn:hover{
     background-color: white;
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
 .navbar-nav{
@@ -96,8 +98,10 @@
     opacity: 0.8;
 }
 
+/* HEADER*/
+
 header{
-    min-height: 78vh;
+    min-height: 84vh;
     padding-top: 7rem;
     background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0,0,0,0.4)), url(./media/fans3.jpeg) center/cover
     no-repeat;
@@ -151,40 +155,44 @@ header{
 
   
 
-/*TEST BLOG*/
-.product {
+/*Blog*/
+
+.blog-list {
     position: relative;
     overflow: hidden;
     padding: 20px;
   }
   
-  .product-category {
-    padding: 0 10vw;
+  .blog-category {
+    padding: 0 5vw;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 40px;
     text-transform: capitalize;
+    text-align: center;
   }
   
-  .product-container {
-    padding: 0 10vw;
+  .blog-container {
+    padding: 0 5vw;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
   }
   
-  .product-container::-webkit-scrollbar {
+  .blog-container::-webkit-scrollbar {
     display: none;
   }
   
-  .product-card {
+  .blog-card {
     flex: 0 0 auto;
-    width: 250px;
-    height: 450px;
-    margin-right: 40px;
+    width: 410px;
+    height: 500px;
+    margin-right: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
   }
   
-  .product-image {
+  .blog-image {
     position: relative;
     width: 100%;
     height: 350px;
@@ -197,12 +205,12 @@ header{
     object-fit: cover;
   }
   
-  .discount-tag {
+  .read-time {
     position: absolute;
     background: #fff;
     padding: 5px;
     border-radius: 5px;
-    color: #ff7d7d;
+    color: black;
     right: 10px;
     top: 10px;
     text-transform: capitalize;
@@ -225,28 +233,28 @@ header{
     opacity: 0;
   }
   
-  .product-card:hover .card-btn {
+  .blog-card:hover .card-btn {
     opacity: 1;
   }
   
   .card-btn:hover {
-    background: #ff7d7d;
+    background: rgb(204, 157, 0);
     color: #fff;
   }
   
-  .product-info {
+  .blog-info {
     width: 100%;
     height: 100px;
     padding-top: 10px;
   }
   
-  .product-brand {
+  .blog-title {
     text-transform: uppercase;
   }
   
-  .product-short-description {
+  .blog-short-description {
     width: 100%;
-    height: 20px;
+    height: 100px;
     line-height: 20px;
     overflow: hidden;
     opacity: 0.5;
@@ -298,7 +306,7 @@ header{
   .nxt-btn:hover img {
     opacity: 1;
   }
-
+  
   
 
 
@@ -314,18 +322,20 @@ header{
     }
     
     .navbar-cng .site-brand span{
-        color: gold;
+        color: rgb(204, 157, 0);
     }
     
     .navbar-cng #navbar-show-btn{
-        color: gold;
+        color:rgb(204, 157, 0);
     }
 
+
+    /* recent*/
 
     .latest-item{
         position: relative;
         width: 100%;
-        overflow: hidden;
+        overflow:hidden;
         transition: var(--trans);
     }
     
@@ -350,7 +360,7 @@ header{
         color:white;
         width: 100%;
         padding:1rem;
-        transform: translateY(62%);
+        transform: translateY(68%);
         transition: var(--trans);
     }
 
@@ -370,6 +380,9 @@ header{
     .latest-item:hover .latest-item-content{
         transform: translateY(0);
     }
+
+    
+
   
 
 
@@ -385,7 +398,7 @@ footer{
 footer::before{
     content: "";
     position: absolute;
-    background-color: red;
+    background-color: rgb(255, 0, 0);
     height: 4px;
     top: 0;
     left: 0;
@@ -398,7 +411,7 @@ footer.site-brand{
 }
 
 .footer-item{
-    margin: 3rem;
+    margin: 3rem 0;
 }
 
 .footer-item a{
@@ -408,7 +421,7 @@ footer.site-brand{
 }
 
 .footer-item a:hover{
-    color: gold;
+    color: rgb(204, 157, 0);
 }
 .footer-item ul{
     padding: 0;
@@ -438,20 +451,20 @@ footer.site-brand{
     opacity: 0.7;
 }
 
-.subscribe-form{
-    flex-direction:r
+.subscribe-form form{
+    flex-direction:column;
 }
 
 .subscribe-form form input{
-    width: 75%;
+    width: 100%;
     max-width: 300px;
 }
 .subscribe-form .form-control{
-    border-color: gold;
+    border-color: rgb(204, 157, 0);
     transition: var(--trans);
 }
 .subscribe-form .form-control:focus{
-    border-color: gold;
+    border-color: rgb(204, 157, 0);
 }
 .subscribe-form form input[type = "email"]::placeholder{
     color: black;
@@ -462,10 +475,10 @@ footer.site-brand{
 /* ABOUT PAGE */
 
 .about-right .text{
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
 }
 .about-right h2{
-    margin-bottom: 2.5rem;
+    margin-bottom: 4.6rem;
 }
 
 /* Stats */
@@ -499,46 +512,45 @@ footer.site-brand{
 .stats-info .text{
     text-transform: uppercase;
 }
+/* Stats//*/
 
 
 /*Contact */
 
 .contact-form .form-control{
-    border: 1px solid gold;
-    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #000;
     display: block;
-    margin: 1.6rem auto;
+    margin: 2rem auto;
 }
-
 .contact-form .btn{
     display: block;
     margin: auto;
 }
-
 .contact-icon{
-    background-color: gold;
-    color: white;
-    width: 60px;
-    height: 60px;
+    background-color: rgb(204, 157, 0);
+    color:white;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     margin: 1rem auto;
     font-size: 2rem;
 }
-
 .contact-item{
     text-align: center;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
-
 .contact-item div span{
     font-weight: 600;
-    font-family: "";
+    font-family: "Ralway", sans-serif;
     font-size: 1.2rem;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
-/* blog */
+/* Contact//*/
+
+/* blog test */
 
 #blog{
     background-color:rgba(141, 73, 73, 0.3);
@@ -553,7 +565,7 @@ footer.site-brand{
 }
 .blog-date{
     position:absolute;
-    background-color: gold;
+    background-color:rgb(204, 157, 0);
     color: white;
     padding: 0.5rem;
     height: 38px;
@@ -589,7 +601,51 @@ footer.site-brand{
     opacity: 0.8;
 }
 
-/*TEST*/
+/* finish test*/
+
+/* Our Main Bloggers */
+
+#people{
+    background-color: lightgray;
+}
+
+.people-item{
+    border: 2px solid lightgray;
+    padding: 2rem 1rem;
+    position: relative;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    margin: 2rem 0 14rem 0;
+}
+.people-item::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+}
+
+.people-item-info{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.people-item-info img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 1rem;
+}
+
+/* main people// */
+
 
 
 

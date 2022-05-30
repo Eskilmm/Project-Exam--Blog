@@ -64,6 +64,8 @@
     </div>
 </header>
 
+<h1>Blogs</h1>
+<ul id="blogs">Loading...</ul>
 
 <script>
     const url = "https://www.geek.no/wp-json/wp/v2/posts";
@@ -78,15 +80,15 @@
       console.error('Error:', error);
     });
     
-    const output = document.querySelector("#posts");
-    function listPosts (posts) {
+    const output = document.querySelector("#blogs");
+    function listbBlogs (blogs) {
         let myList = "";
-        for (let post of posts) {
-            console.log(post);
+        for (let blog of blogs) {
+            console.log(blog);
             myList += `
             <li>
-                <a href="post.html?id=${post.id}">
-                    ${post.title.rendered}
+                <a href="post.html?id=${blog.id}">
+                    ${blog.title.rendered}
                 </a>
             </li>`;
         }
